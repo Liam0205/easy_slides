@@ -72,10 +72,10 @@
 \subsection{程序代码示例}
 
 \begin{lstlisting}[style = lcpp, caption = {快速排序主函数}]
-template <typename BidirIter,
-typename T = typename std::iterator_traits<BidirIter>::value_type,
+template <typename RandomIt,
+typename T = typename std::iterator_traits<RandomIt>::value_type,
 typename Compare = std::less<T>>
-void quick_sort(BidirIter first, BidirIter last, Compare comp = Compare()) {
+void quick_sort(RandomIt first, RandomIt last, Compare comp = Compare()) {
   for (auto size = std::distance(first, last); size > 1; size = std::distance(first, last)) {
     T pivot = median(first, last - 1, first + size / 2, comp);
     auto eq = inplace_partition(first, last, pivot, comp);
