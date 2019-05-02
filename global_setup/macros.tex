@@ -38,6 +38,56 @@
 \newcommand{\vp}{\vec{p}}
 
 %%% --->
+% more math operators   added by Ionizing
+% partially copied (with modification) from commath.sty
+%%% <---
+
+% derivative in fractional form, i.e. $\frac{\dif }{\dif x}$
+\newcommand{\fdif}[3][] { %
+  \ensuremath{ %
+    \ifinner
+      \tfrac{\dif{^{#1}} #2}{\dif{#3^{#1}}}
+    \else
+      \dfrac{\dif{^{#1}} #2}{\dif{#3^{#1}}}
+    \fi
+}}
+
+% partial derivative (in higher order)
+\newcommand{\pdif}{\mathop{}\!\partial}
+
+% partial derivative in fractional form
+\newcommand{\fpdif}[3][] { %
+  \ensuremath{ %
+    \ifinner
+      \tfrac{\pdif{^{#1}} #2}{\pdif{#3^{#1}}}
+    \else
+      \dfrac{\pdif{^{#1}} #2}{\pdif{#3^{#1}}}
+    \fi
+}}
+
+% mixed partial derivative
+\newcommand{\mpdif}[6]{ %
+  \ensuremath{ %
+    \ifinner
+      \tfrac{\pdif{^{#2}} #1}{\partial{#3^{#4}}\partial{#5^{#6}}}
+    \else
+      \dfrac{\pdif{^{#2}} #1}{\partial{#3^{#4}}\partial{#5^{#6}}}
+    \fi
+}}
+
+% Hamiltonian and Lagrange operators
+\newcommand{\Hamilton}{ %
+  \ensuremath{ %
+    \mathscr{H}
+}}
+
+\newcommand{\Lagrange}{ %
+  \ensuremath{ %
+    \mathscr{L}
+}}
+
+
+%%% --->
 % text defines and shortcuts
 %%% <---
 
