@@ -1,6 +1,6 @@
 % !TeX root = ./easy_slides.tex
 % !TeX program = xelatex
-\documentclass[UTF8, zihao = 5]{article}
+\documentclass[UTF8, zihao = 5, draft]{article}
 
 \input{./global_setup/packages}
 \input{./global_setup/macros}
@@ -134,6 +134,27 @@ void quick_sort(RandomIt first, RandomIt last, Compare comp = Compare()) {
     \item 再继续
   \end{enumerate}
 \end{minipage}
+
+\clp % 换页
+
+\section{更多数学算符展示}
+%\begin{enumerate}
+%	\item[微分算符] \fdif[2]{f}{x}, \fdif{f}{x}
+%\end{enumerate}
+\begin{table}[!h] \centering
+\begin{tabular}{|c|c|c|}
+	\hline 
+	符号名称 & 符号用法 & 符号展示 \\ \hline
+	导数算符 & \verb|\fdif[n]{f}{x}| & $\fdif[n]{f}{x}$ \\ \hline
+			& \verb|\fdif{f}{x}|    & $\fdif{f}{x}$ \\ \hline
+	偏微分算符 & \verb|\pdif x| & $\pdif x$ \\ \hline
+	偏导算符 & \verb|\fpdif[n]{f}{x}| & $\fpdif[n]{f}{y}$ \\ \hline
+	混合偏导算符 & \verb|\mpdif{f}{5}{x}{2}{y}{3}| & $\mpdif{f}{5}{x}{2}{y}{3}$ \\ \hline
+	哈密顿量 & \verb|\Hamilton| & \Hamilton \\ \hline
+	拉格朗日量 & \verb|\Lagrange| & \Lagrange \\ \hline
+\end{tabular}
+\end{table}
+
 
 \clp  % 末页
 \thispagestyle{empty}
